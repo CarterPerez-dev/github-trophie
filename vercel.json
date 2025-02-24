@@ -1,7 +1,12 @@
 {
-    "builds":[{
-        "src": "**/index.ts",
-        "use": "vercel-deno@1.1.1"
-    }],
-    "routes": [{ "src": "/.*", "dest": "/" }]
+  "functions": {
+    // If you place your Deno code in "api/index.ts"
+    "api/index.ts": {
+      "runtime": "deno"
+    }
+  },
+  "routes": [
+    // Route everything to the function
+    { "src": "/.*", "dest": "api/index.ts" }
+  ]
 }
