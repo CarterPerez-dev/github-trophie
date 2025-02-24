@@ -1,12 +1,10 @@
 {
   "functions": {
-    // If you place your Deno code in "api/index.ts"
     "api/index.ts": {
       "runtime": "deno"
     }
   },
   "routes": [
-    // Route everything to the function
     { "src": "/.*", "dest": "api/index.ts" }
   ]
 }
